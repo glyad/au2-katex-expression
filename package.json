@@ -1,25 +1,25 @@
 {
   "name": "au2-katex-expression",
-  "description": "An Aurelia 2 plugin.",
+  "description": "The Aurelia 2 KaTeX Component",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "???"
+    "url": "https://github.com/glyad/au2-katex-expression.git"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
-    "@aurelia/router": "dev",
-    "aurelia": "dev",
+    "@aurelia/router": "latest",
+    "aurelia": "latest",
     "katex": "^0.16.9"
   },
   "devDependencies": {
-    "@aurelia/testing": "dev",
-    "@aurelia/ts-jest": "dev",
-    "@aurelia/webpack-loader": "dev",
+    "@aurelia/testing": "latest",
+    "@aurelia/ts-jest": "latest",
+    "@aurelia/webpack-loader": "latest",
     "@types/jest": "^29.5.2",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
