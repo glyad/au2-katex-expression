@@ -1,6 +1,7 @@
 <h1>KaTeX Demo</h1> 
 
-<div><katex-expression expression="c = \pm\sqrt{a^2 + b^2}" options='{ "displayMode": false , "throwOnError": true, "output": "html" }'></katex-expression></div>
+<!-- <div><katex-expression expression="c = \pm\sqrt{a^2 + b^2}" 
+	display-mode="true" output="html"></katex-expression></div> -->
 
 <!-- <div><katex-expression expression="f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi"></katex-expression></div>
 
@@ -8,12 +9,21 @@
 
 <div><katex-expression expression='\int \dfrac{(log\ x)^3}{x}\ dx'></katex-expression></div>
 
-<katex-expression expression="\begin{pmatrix} a & b \\ c & d \end{pmatrix}"></katex-expression> -->
+<katex-expression expression="\begin{pmatrix} a & b \\ c & d \end{pmatrix}"></katex-expression>
 
 <katex-expression 
 	expression='\int \dfrac{(log\ x)^3}{x}\ dx' 
-	options='{ "displayMode": false , "throwOnError": true, "output": "mathml" }'>
+	display-mode="true" output="mathml">
 </katex-expression>
+ -->
+<br>
+<katex-expression expression.bind="expression" output="html" display-mode="true"></katex-expression>
 
 <br>
-<katex-expression expression.bind="expression" options="{ "displayMode": false , "throwOnError": true, "output": "mathml" }"></katex-expression>
+<katex-expression expression.bind="expression" output="mathml" display-mode="true"></katex-expression>
+
+<br>
+<katex-expression expression.bind="expression" output="html"></katex-expression>
+
+<br>
+<katex-expression expression.bind="expression" output="mathml"></katex-expression>
