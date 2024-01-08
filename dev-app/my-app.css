@@ -1,0 +1,18 @@
+.property-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-items: left;
+  border-color: blue;
+  border-width: 1px;
+  border-style: solid;
+}

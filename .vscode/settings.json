@@ -3,6 +3,7 @@
     "fleqn",
     "katex",
     "leqno",
-    "mathml"
+    "mathml",
+    "rrggbb"
   ]
 }

@@ -1,29 +1,109 @@
 <h1>KaTeX Demo</h1> 
 
-<!-- <div><katex-expression expression="c = \pm\sqrt{a^2 + b^2}" 
-	display-mode="true" output="html"></katex-expression></div> -->
 
-<!-- <div><katex-expression expression="f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi"></katex-expression></div>
-
-<div><katex-expression expression="\int_{-∞}^{∞} e^{-x^2} dx"></katex-expression></div>
-
-<div><katex-expression expression='\int \dfrac{(log\ x)^3}{x}\ dx'></katex-expression></div>
-
-<katex-expression expression="\begin{pmatrix} a & b \\ c & d \end{pmatrix}"></katex-expression>
-
-<katex-expression 
-	expression='\int \dfrac{(log\ x)^3}{x}\ dx' 
-	display-mode="true" output="mathml">
-</katex-expression>
- -->
-<br>
-<katex-expression expression.bind="expression" output="html" display-mode="true"></katex-expression>
-
-<br>
-<katex-expression expression.bind="expression" output="mathml" display-mode="true"></katex-expression>
-
-<br>
-<katex-expression expression.bind="expression" output="html"></katex-expression>
-
-<br>
-<katex-expression expression.bind="expression" output="mathml"></katex-expression>
+<div class="demo-container">
+	<div style="width: 60%; display: flex; align-self: stretch; justify-self: center; border-color: blue; border-width: 1px; border-right-style: solid; padding: 4px;">
+		<katex-expression expression.bind="expression" 
+											output.bind="output" 
+											display-mode.bind="displayMode" 
+											throw-on-error.bind="throwOnError"
+											leqno.bind="leqno"
+											fleqn.bind="fleqn"
+											errorColor.bind="errorColor"  
+											minRuleThickness.bind="minRuleThickness"
+											colorIsTextColor.bind="colorIsTextColor"
+											maxSize.bind="maxSize"
+											maxExpand.bind="maxExpand"
+											strict.bind="strict"
+											trust.bind="trust"
+											global-group.bind="globalGroup">
+		</katex-expression>
+	</div>
+	<div style="display: flex; flex-direction: column; width: 40%; padding: 4px;">
+		<div class="property-row">
+			<input type="text" value.bind="expression" style="width: 96%;"/>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="displayMode" /> 
+				Display Mode
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				Output:
+				<select value.bind="output" style="width: 60%; outline: none;">
+					<option value="html">HTML</option>
+					<option value="mathml">MathML</option>
+					<option value="htmlAndMathml">HTML and MathML</option>
+				</select>				
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="throwOnError" /> 
+				Throw on Error
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="leqno" /> 
+				Render display math in leqno style (left-justified tags)
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="fleqn" /> 
+				Render display math flush left
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				Error Color:
+				<input type="text" value.bind="errorColor" style="width: 60%; outline: none;"/>
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				Min Rule Thickness:
+				<input type="text" value.bind="minRuleThickness" style="width: 18%; outline: none;"/>
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="colorIsTextColor" /> 
+				Color is Text Color
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				Max Size:
+				<input type="text" value.bind="maxSize" style="width: 60%; outline: none;"/>
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				Max Expand:
+				<input type="text" value.bind="maxExpand" style="width: 50%; outline: none;"/>
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="strict" /> 
+				Strict
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="trust" /> 
+				Trust
+			</label>
+		</div>
+		<div class="property-row">
+			<label>
+				<input type="checkbox" checked.bind="globalGroup" /> 
+				If non-zero, all user-specified sizes, e.g. in \\rule{500em}{500em}, will be capped to maxSize ems. Otherwise, elements and spaces can be arbitrarily large
+			</label>
+		</div>
+	</div>
+</div>
